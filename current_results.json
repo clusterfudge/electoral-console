@@ -133,10 +133,16 @@
       "called": false
     },
     "Alabama": {
-      "state": "Alabama",
-      "type": "presidential",
-      "timestamp": "2024-11-05T18:25:54.290607",
-      "candidates": []
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
     },
     "New Hampshire": {
       "counted": {
