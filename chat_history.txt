@@ -276,3 +276,45 @@
 
 # 2024-11-04 20:45:19.337241
 +/commit
+
+# 2024-11-04 20:48:14.388384
++{
+
+# 2024-11-04 20:48:20.717406
++ok add a new background task to the app.
+
+# 2024-11-04 20:48:33.728943
++every second, poll for the existence of a file called "current_results.json"
+
+# 2024-11-04 20:49:01.200551
++assume it has a dictionary that lokos similar to electoral_map.json, specifically the states property.
+
+# 2024-11-04 20:49:26.348855
++for each state, assume a dictionary with the following shape:
+
+# 2024-11-04 20:49:29.892498
++{
+
+# 2024-11-04 20:50:35.272313
++  "exit_poll": { "democrat": <percentage as float>, "republican": <percentage as float>},
+
+# 2024-11-04 20:51:09.818301
++  "counted": {"democrat": <percentage as float>, "repulican": <percentage as float>},
+
+# 2024-11-04 20:51:46.679822
++  "reporting": <percentage as float>
+
+# 2024-11-04 20:51:49.627773
++}
+
+# 2024-11-04 20:54:11.394095
++expect one more attribute to each state in current_results.json -- "called": <boolean> -- if called, color the map based on the values in counted
+
+# 2024-11-04 20:55:29.012870
++switch the values in the "counted" to integers -- that'll be votes counted (as opposed to percentage)
+
+# 2024-11-04 21:04:37.977333
++I've attached to a debugger, and it looks like the worker isn't starting. why not?
+
+# 2024-11-04 21:07:03.674311
++/exit

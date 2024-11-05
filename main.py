@@ -5,8 +5,9 @@ from textual.reactive import reactive
 from rich.text import Text
 from rich.console import Console
 from rich.panel import Panel
-
+import asyncio
 import json
+import os
 
 # Load electoral data from JSON file
 with open('electoral_map.json', 'r') as f:
@@ -34,6 +35,61 @@ class StateButton(Button):
         self.col = data['col']
         self.rowspan = data.get('rowspan', 1)
         self.colspan = data.get('colspan', 1)
+        # Add properties for live results
+        self.reporting = 0.0
+        self.dem_exit = 0.0
+        self.rep_exit = 0.0
+        self.dem_votes = 0
+        self.rep_votes = 0
+        self.called = False
+
+    def update_results(self, results: dict) -> None:
+        """Update the button with live results."""
+        if self.state in results:
+            state_data = results[self.state]
+            self.reporting = state_data["reporting"]
+            self.dem_exit = state_data["exit_poll"]["democrat"]
+            self.rep_exit = state_data["exit_poll"]["republican"]
+            self.dem_votes = state_data["counted"]["democrat"]
+            self.rep_votes = state_data["counted"]["republican"]
+            self.called = state_data["called"]
+            
+            # Calculate vote percentages for display
+            total_votes = self.dem_votes + self.rep_votes
+            dem_pct = (self.dem_votes / total_votes * 100) if total_votes > 0 else 0
+            rep_pct = (self.rep_votes / total_votes * 100) if total_votes > 0 else 0
+            
+            # Update colors based on results
+            if self.called:
+                # If called, use the counted results to determine color
+                if self.dem_votes > self.rep_votes:
+                    self.status = "democrat"
+                    self.styles.background = "blue"
+                elif self.rep_votes > self.dem_votes:
+                    self.status = "republican"
+                    self.styles.background = "red"
+            else:
+                # If not called, use a lighter shade to indicate leading but not called
+                if total_votes > 0:
+                    if self.dem_votes > self.rep_votes:
+                        self.status = "undecided"
+                        self.styles.background = "#000066"  # Darker blue
+                    elif self.rep_votes > self.dem_votes:
+                        self.status = "undecided"
+                        self.styles.background = "#660000"  # Darker red
+                    else:
+                        self.status = "undecided"
+                        self.styles.background = "grey"
+                else:
+                    self.status = "undecided"
+                    self.styles.background = "grey"
+            
+            # Update label to show vote percentages and called status
+            called_indicator = "✓" if self.called else ""
+            if total_votes > 0:
+                self.label = f"{self.state} {called_indicator}\n({self.votes})\n{dem_pct:.1f}% - {rep_pct:.1f}%\n{total_votes:,} votes"
+            else:
+                self.label = f"{self.state} {called_indicator}\n({self.votes})\n{self.reporting:.1f}% reporting"
 
     def on_button_pressed(self) -> None:
         """Cycle through states when clicked."""
@@ -123,15 +179,17 @@ class ElectoralCounter(Static):
     """Widget to display electoral vote totals."""
     dem_votes = reactive(0)
     rep_votes = reactive(0)
+    dem_total_votes = reactive(0)
+    rep_total_votes = reactive(0)
 
     def render(self) -> Text:
         """Render the vote counter."""
         return Text.assemble(
             ("Democratic: ", "blue"),
-            (str(self.dem_votes), "white"),
+            (f"{self.dem_votes} ({self.dem_total_votes:,})", "white"),
             " | ",
             ("Republican: ", "red"),
-            (str(self.rep_votes), "white"),
+            (f"{self.rep_votes} ({self.rep_total_votes:,})", "white"),
             " | ",
             "270 to win"
         )
@@ -186,6 +244,24 @@ class ElectoralMapApp(App):
         yield ElectoralCounter()
         yield ElectoralMap()
 
+    async def poll_results(self) -> None:
+        """Background task to poll for election results."""
+        while True:
+            if os.path.exists("current_results.json"):
+                try:
+                    with open("current_results.json", "r") as f:
+                        results = json.load(f)
+                        if "states" in results:
+                            # Update all state buttons with new results
+                            for button in self.query(StateButton):
+                                button.update_results(results["states"])
+                            # Update electoral vote totals
+                            self.update_electoral_votes()
+                except (json.JSONDecodeError, IOError):
+                    # Handle potential file read errors silently
+                    pass
+            await asyncio.sleep(1)  # Poll every second
+
     def on_mount(self) -> None:
         """Handle the mount event to position states."""
         for button in self.query(StateButton):
@@ -193,20 +269,32 @@ class ElectoralMapApp(App):
             button.styles.grid_column_span = str(button.colspan)
             button.styles.grid_row_start = str(button.row + 1)     # Grid is 1-based
             button.styles.grid_row_span = str(button.rowspan)
+        
+        # Start the background polling task using the app's run_worker method
+        self.run_worker(self.poll_results(), exclusive=True)
 
     def update_electoral_votes(self) -> None:
         """Update the electoral vote totals."""
         counter = self.query_one(ElectoralCounter)
+        dem_electoral = rep_electoral = 0
         dem_total = rep_total = 0
 
         for button in self.query(StateButton):
-            if button.status == "democrat":
-                dem_total += button.votes
-            elif button.status == "republican":
-                rep_total += button.votes
+            # Add to popular vote totals regardless of called status
+            dem_total += button.dem_votes
+            rep_total += button.rep_votes
+            
+            # Only count called states in the electoral total
+            if button.called:
+                if button.dem_votes > button.rep_votes:
+                    dem_electoral += button.votes
+                elif button.rep_votes > button.dem_votes:
+                    rep_electoral += button.votes
 
-        counter.dem_votes = dem_total
-        counter.rep_votes = rep_total
+        counter.dem_votes = dem_electoral
+        counter.rep_votes = rep_electoral
+        counter.dem_total_votes = dem_total
+        counter.rep_total_votes = rep_total
 
 
 if __name__ == "__main__":
