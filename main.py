@@ -1,22 +1,20 @@
 from textual.app import App, ComposeResult
 from textual.containers import Container
-from textual.widgets import Static, Button, Header
+from textual.widgets import Static, Button
 from textual.reactive import reactive
 from rich.text import Text
-from rich.console import Console
-from rich.panel import Panel
 import asyncio
 import json
 import os
 
 # Load electoral data from JSON file
-with open('electoral_map.json', 'r') as f:
+with open("electoral_map.json", "r") as f:
     ELECTORAL_DATA = json.load(f)
 
 
 class EmptyButton(Button):
     """A placeholder button for empty grid spaces."""
-    
+
     def __init__(self):
         super().__init__("")
         self.styles.background = "black"
@@ -29,12 +27,12 @@ class StateButton(Button):
     def __init__(self, state: str, data: dict):
         super().__init__(f"{state}\n({data['votes']})")
         self.state = state
-        self.votes = data['votes']
+        self.votes = data["votes"]
         self.status = "undecided"  # can be "undecided", "democrat", or "republican"
-        self.row = data['row']
-        self.col = data['col']
-        self.rowspan = data.get('rowspan', 1)
-        self.colspan = data.get('colspan', 1)
+        self.row = data["row"]
+        self.col = data["col"]
+        self.rowspan = data.get("rowspan", 1)
+        self.colspan = data.get("colspan", 1)
         # Add properties for live results
         self.reporting = 0.0
         self.dem_exit = 0.0
@@ -53,12 +51,12 @@ class StateButton(Button):
             self.dem_votes = state_data["counted"]["democrat"]
             self.rep_votes = state_data["counted"]["republican"]
             self.called = state_data["called"]
-            
+
             # Calculate vote percentages for display
             total_votes = self.dem_votes + self.rep_votes
             dem_pct = (self.dem_votes / total_votes * 100) if total_votes > 0 else 0
             rep_pct = (self.rep_votes / total_votes * 100) if total_votes > 0 else 0
-            
+
             # Update colors based on results
             if self.called:
                 # If called, use the counted results to determine color
@@ -83,7 +81,7 @@ class StateButton(Button):
                 else:
                     self.status = "undecided"
                     self.styles.background = "grey"
-            
+
             # Update label to show vote percentages and called status
             called_indicator = "✓" if self.called else ""
             if total_votes > 0:
@@ -114,16 +112,16 @@ class ElectoralMap(Static):
         """Calculate the maximum dimensions of the grid."""
         max_row = 0
         max_col = 0
-        
+
         for data in ELECTORAL_DATA["states"].values():
             row = data["row"]
             col = data["col"]
             rowspan = data.get("rowspan", 1)
             colspan = data.get("colspan", 1)
-            
+
             max_row = max(max_row, row + rowspan)
             max_col = max(max_col, col + colspan)
-            
+
         return max_row, max_col
 
     def is_position_occupied(self, row: int, col: int, state_positions: set) -> bool:
@@ -138,11 +136,11 @@ class ElectoralMap(Static):
             col = data["col"]
             rowspan = data.get("rowspan", 1)
             colspan = data.get("colspan", 1)
-            
+
             for r in range(row, row + rowspan):
                 for c in range(col, col + colspan):
                     positions.add((r, c))
-        
+
         return positions
 
     def compose(self) -> ComposeResult:
@@ -177,6 +175,7 @@ class ElectoralMap(Static):
 
 class ElectoralCounter(Static):
     """Widget to display electoral vote totals."""
+
     dem_votes = reactive(0)
     rep_votes = reactive(0)
     dem_total_votes = reactive(0)
@@ -191,12 +190,13 @@ class ElectoralCounter(Static):
             ("Republican: ", "red"),
             (f"{self.rep_votes} ({self.rep_total_votes:,})", "white"),
             " | ",
-            "270 to win"
+            "270 to win",
         )
 
 
 class ElectoralMapApp(App):
     """The main application class."""
+
     CSS = """
     ElectoralMapApp {
         layout: grid;
@@ -267,9 +267,9 @@ class ElectoralMapApp(App):
         for button in self.query(StateButton):
             button.styles.grid_column_start = str(button.col + 1)  # Grid is 1-based
             button.styles.grid_column_span = str(button.colspan)
-            button.styles.grid_row_start = str(button.row + 1)     # Grid is 1-based
+            button.styles.grid_row_start = str(button.row + 1)  # Grid is 1-based
             button.styles.grid_row_span = str(button.rowspan)
-        
+
         # Start the background polling task using the app's run_worker method
         self.run_worker(self.poll_results(), exclusive=True)
 
@@ -283,7 +283,7 @@ class ElectoralMapApp(App):
             # Add to popular vote totals regardless of called status
             dem_total += button.dem_votes
             rep_total += button.rep_votes
-            
+
             # Only count called states in the electoral total
             if button.called:
                 if button.dem_votes > button.rep_votes:
