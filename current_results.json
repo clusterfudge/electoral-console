@@ -1,0 +1,16 @@
+{
+  "states": {
+    "Washington": {
+        "counted": {
+	  "republican": 10,
+	  "democrat": 11
+        },
+	"exit_poll": {
+	  "republican": 0.49,
+	  "democrat": 0.51
+	},
+	"reporting": 0.99,
+	"called": true
+    }
+  }
+}
