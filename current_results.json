@@ -1,16 +1,616 @@
 {
   "states": {
+    "Alaska": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Hawaii": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
     "Washington": {
-        "counted": {
-	  "republican": 10,
-	  "democrat": 11
-        },
-	"exit_poll": {
-	  "republican": 0.49,
-	  "democrat": 0.51
-	},
-	"reporting": 0.99,
-	"called": true
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Oregon": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "California": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Idaho": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Nevada": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Arizona": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Montana": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Wyoming": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Utah": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Colorado": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "New Mexico": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "North Dakota": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "South Dakota": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Nebraska": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Kansas": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Oklahoma": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Texas": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Minnesota": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Iowa": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Missouri": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Arkansas": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Louisiana": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Wisconsin": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Illinois": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Kentucky": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Tennessee": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Mississippi": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Alabama": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Michigan": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Indiana": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Ohio": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "West Virginia": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Georgia": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Florida": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Maine": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Vermont": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "New Hampshire": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "New York": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Pennsylvania": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Virginia": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "North Carolina": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "South Carolina": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Massachusetts": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Rhode Island": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Connecticut": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "New Jersey": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Delaware": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "Maryland": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
+    },
+    "District of Columbia": {
+      "counted": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "exit_poll": {
+        "republican": 0,
+        "democrat": 0
+      },
+      "reporting": 0,
+      "called": false
     }
   }
 }
