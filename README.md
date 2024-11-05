@@ -15,11 +15,15 @@ This tool helps analyze and calculate Electoral College outcomes for US presiden
 To run this project:
 
 1. Make sure you have Python installed 🐍
-2. Install dependencies:
+2. Install uv (modern Python package installer):
 ```bash
-pip install -r requirements.txt
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
-3. Run the main script:
+3. Install dependencies:
+```bash
+uv pip install -r requirements.txt
+```
+4. Run the main script:
 ```bash
 python main.py
 ```
@@ -39,7 +43,7 @@ python main.py
 
 ## 👩‍💻 Development
 
-This project is written in Python and uses JSON for data storage. Feel free to contribute and make it even better! 🌟
+This project is written in Python and uses JSON for data storage. We use `uv` for fast, reliable dependency management. Feel free to contribute and make it even better! 🌟
 
 ## 🤖 Created By
 
