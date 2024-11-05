@@ -6,6 +6,7 @@ dist/
 wheels/
 *.egg-info
 .idea/
+chat_history.txt
 
 # Virtual environments
 .venv

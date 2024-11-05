@@ -5,7 +5,8 @@ from textual.reactive import reactive
 from rich.text import Text
 import asyncio
 import json
-import os
+import aiohttp
+import argparse
 
 # Load electoral data from JSON file
 with open("electoral_map.json", "r") as f:
@@ -239,6 +240,10 @@ class ElectoralMapApp(App):
     }
     """
 
+    def __init__(self, local_file=None):
+        super().__init__()
+        self.local_file = local_file
+
     def compose(self) -> ComposeResult:
         """Create child widgets of the application."""
         yield ElectoralCounter()
@@ -246,10 +251,11 @@ class ElectoralMapApp(App):
 
     async def poll_results(self) -> None:
         """Background task to poll for election results."""
-        while True:
-            if os.path.exists("current_results.json"):
+        if self.local_file:
+            # Local file polling mode
+            while True:
                 try:
-                    with open("current_results.json", "r") as f:
+                    with open(self.local_file, "r") as f:
                         results = json.load(f)
                         if "states" in results:
                             # Update all state buttons with new results
@@ -257,10 +263,30 @@ class ElectoralMapApp(App):
                                 button.update_results(results["states"])
                             # Update electoral vote totals
                             self.update_electoral_votes()
-                except (json.JSONDecodeError, IOError):
-                    # Handle potential file read errors silently
+                except Exception:
+                    # Handle file reading errors silently
                     pass
-            await asyncio.sleep(1)  # Poll every second
+                await asyncio.sleep(1)  # Poll every second
+        else:
+            # Web server polling mode
+            async with aiohttp.ClientSession() as session:
+                while True:
+                    try:
+                        async with session.get(
+                            "https://electoral-console.dokku.heare.io/"
+                        ) as response:
+                            if response.status == 200:
+                                results = await response.json()
+                                if "states" in results:
+                                    # Update all state buttons with new results
+                                    for button in self.query(StateButton):
+                                        button.update_results(results["states"])
+                                    # Update electoral vote totals
+                                    self.update_electoral_votes()
+                    except Exception:
+                        # Handle connection errors silently
+                        pass
+                    await asyncio.sleep(1)  # Poll every second
 
     def on_mount(self) -> None:
         """Handle the mount event to position states."""
@@ -298,5 +324,17 @@ class ElectoralMapApp(App):
 
 
 if __name__ == "__main__":
-    app = ElectoralMapApp()
+    parser = argparse.ArgumentParser(description="Electoral Map Visualization")
+    parser.add_argument(
+        "--local-file",
+        type=str,
+        default=None,
+        help="Path to local JSON file to read results from (default: current_results.json)",
+    )
+    args = parser.parse_args()
+
+    # If --local-file is specified without a value, use the default
+    local_file = "current_results.json" if args.local_file == "" else args.local_file
+
+    app = ElectoralMapApp(local_file=local_file)
     app.run()
