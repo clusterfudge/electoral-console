@@ -1,0 +1,76 @@
+{
+    "states": {
+        "Alaska": {"votes": 3, "code": "AK", "region": "west", "row": 0, "col": 0},
+        "Hawaii": {"votes": 4, "code": "HI", "region": "west", "row": 7, "col": 0},
+
+        "Washington": {"votes": 12, "code": "WA", "region": "west", "row": 2, "col": 0},
+        "Oregon": {"votes": 8, "code": "OR", "region": "west", "row": 3, "col": 0},
+        "California": {"votes": 54, "code": "CA", "region": "west", "row": 4, "col": 0},
+
+        "Idaho": {"votes": 4, "code": "ID", "region": "west", "row": 2, "col": 1},
+        "Nevada": {"votes": 6, "code": "NV", "region": "west", "row": 3, "col": 1},
+        "Arizona": {"votes": 11, "code": "AZ", "region": "west", "row": 5, "col": 0},
+
+        "Montana": {"votes": 4, "code": "MT", "region": "west", "row": 2, "col": 2},
+        "Wyoming": {"votes": 3, "code": "WY", "region": "west", "row": 3, "col": 2},
+        "Utah": {"votes": 6, "code": "UT", "region": "west", "row": 4, "col": 1},
+        "Colorado": {"votes": 10, "code": "CO", "region": "west", "row": 4, "col": 2},
+        "New Mexico": {"votes": 5, "code": "NM", "region": "west", "row": 5, "col": 1},
+
+        "North Dakota": {"votes": 3, "code": "ND", "region": "midwest", "row": 2, "col": 3},
+        "South Dakota": {"votes": 3, "code": "SD", "region": "midwest", "row": 3, "col": 3},
+        "Nebraska": {"votes": 5, "code": "NE", "region": "midwest", "row": 4, "col": 3},
+        "Kansas": {"votes": 6, "code": "KS", "region": "midwest", "row": 5, "col": 2},
+        "Oklahoma": {"votes": 7, "code": "OK", "region": "south", "row": 6, "col": 2},
+        "Texas": {"votes": 40, "code": "TX", "region": "south", "row": 7, "col": 2},
+
+        "Minnesota": {"votes": 10, "code": "MN", "region": "midwest", "row": 2, "col": 4},
+        "Iowa": {"votes": 6, "code": "IA", "region": "midwest", "row": 3, "col": 4},
+        "Missouri": {"votes": 10, "code": "MO", "region": "midwest", "row": 4, "col": 4},
+        "Arkansas": {"votes": 6, "code": "AR", "region": "south", "row": 5, "col": 3},
+        "Louisiana": {"votes": 8, "code": "LA", "region": "south", "row": 6, "col": 3},
+
+        "Wisconsin": {"votes": 10, "code": "WI", "region": "midwest", "row": 1, "col": 5},
+        "Illinois": {"votes": 19, "code": "IL", "region": "midwest", "row": 2, "col": 5},
+        "Kentucky": {"votes": 8, "code": "KY", "region": "south", "row": 4, "col": 5},
+        "Tennessee": {"votes": 11, "code": "TN", "region": "south", "row": 5, "col": 4},
+        "Mississippi": {"votes": 6, "code": "MS", "region": "south", "row": 6, "col": 4},
+        "Alabama": {"votes": 9, "code": "AL", "region": "south", "row": 6, "col": 5},
+
+        "Michigan": {"votes": 15, "code": "MI", "region": "midwest", "row": 2, "col": 6},
+        "Indiana": {"votes": 11, "code": "IN", "region": "midwest", "row": 3, "col": 5},
+        "Ohio": {"votes": 17, "code": "OH", "region": "midwest", "row": 3, "col": 6},
+        "West Virginia": {"votes": 4, "code": "WV", "region": "south", "row": 4, "col": 6},
+        "Georgia": {"votes": 16, "code": "GA", "region": "south", "row": 6, "col": 6},
+        "Florida": {"votes": 30, "code": "FL", "region": "south", "row": 7, "col": 6},
+
+        "Maine": {"votes": 4, "code": "ME", "region": "northeast", "row": 0, "col": 10},
+        "Vermont": {"votes": 3, "code": "VT", "region": "northeast", "row": 1, "col": 9},
+        "New Hampshire": {"votes": 4, "code": "NH", "region": "northeast", "row": 1, "col": 10},
+        "New York": {"votes": 28, "code": "NY", "region": "northeast", "row": 2, "col": 8},
+        "Pennsylvania": {"votes": 19, "code": "PA", "region": "northeast", "row": 3, "col": 7},
+        "Virginia": {"votes": 13, "code": "VA", "region": "south", "row": 4, "col": 7},
+        "North Carolina": {"votes": 16, "code": "NC", "region": "south", "row": 5, "col": 5},
+        "South Carolina": {"votes": 9, "code": "SC", "region": "south", "row": 5, "col": 6},
+        
+        "Massachusetts": {"votes": 11, "code": "MA", "region": "northeast", "row": 2, "col": 9},
+        "Rhode Island": {"votes": 4, "code": "RI", "region": "northeast", "row": 3, "col": 10},
+        "Connecticut": {"votes": 7, "code": "CT", "region": "northeast", "row": 3, "col": 9},
+        "New Jersey": {"votes": 14, "code": "NJ", "region": "northeast", "row": 3, "col": 8},
+        "Delaware": {"votes": 3, "code": "DE", "region": "northeast", "row": 4, "col": 9},
+        "Maryland": {"votes": 10, "code": "MD", "region": "northeast", "row": 4, "col": 8},
+        "District of Columbia": {"votes": 3, "code": "DC", "region": "northeast", "row": 5, "col": 7}
+    },
+    "candidates": {
+        "democrat": {
+            "name": "Kamala Harris",
+            "party": "Democrat",
+            "color": "blue"
+        },
+        "republican": {
+            "name": "Donald Trump",
+            "party": "Republican",
+            "color": "red"
+        }
+    }
+}
