@@ -1,7 +1,6 @@
 import requests
 import json
 import pandas as pd
-from datetime import datetime
 import os
 
 
@@ -49,26 +48,26 @@ def process_data(df):
     candidate_totals = (
         pres_data.groupby(["Candidate Name", "Party Code"])["Votes"].sum().reset_index()
     )
-    total_votes = candidate_totals["Votes"].sum()
 
-    # Initialize the results structure
+    # Initialize results in the required format
     results = {
-        "state": "Alabama",
-        "type": "presidential",
-        "timestamp": datetime.utcnow().isoformat(),
-        "candidates": [],
+        "counted": {"republican": 0, "democrat": 0},
+        "exit_poll": {"republican": 0, "democrat": 0},
+        "reporting": 0,
+        "called": False,
     }
 
-    # Process each candidate
+    # Process votes for each party
     for _, row in candidate_totals.iterrows():
+        party = row["Party Code"].lower()
         votes = int(row["Votes"])
-        candidate = {
-            "name": row["Candidate Name"],
-            "party": row["Party Code"],
-            "votes": votes,
-            "percent": votes / total_votes if total_votes > 0 else 0,
-        }
-        results["candidates"].append(candidate)
+        if party == "rep":
+            results["counted"]["republican"] = votes
+        elif party == "dem":
+            results["counted"]["democrat"] = votes
+
+    # Calculate reporting percentage (if available in the data)
+    # For now, setting to 0 as per the format
 
     return results
 
