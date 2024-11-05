@@ -11,6 +11,18 @@ normalize_state_name() {
     echo "$1" | tr ' ' '_'
 }
 
+# Function to check if jurisdiction is fully reported
+check_fully_reported() {
+    local json_file="$1"
+    if [ -f "$json_file" ]; then
+        reporting=$(cat "$json_file" | python3 -c "import sys, json; print(json.load(sys.stdin).get('reporting', 0))")
+        if [ "$reporting" = "100" ]; then
+            return 0  # true in bash
+        fi
+    fi
+    return 1  # false in bash
+}
+
 # Array of states
 states=(
     "Alabama" "Alaska" "Arizona" "Arkansas" "California" "Colorado" "Connecticut" 
@@ -46,8 +58,13 @@ for state in "${states[@]}"; do
         }' > "$state_dir/latest.json"
     fi
     
-    # Check if scraper exists and run it
+    # Check if scraper exists and jurisdiction isn't fully reported
     if [ -f "$state_dir/scraper.py" ]; then
+        if check_fully_reported "$state_dir/latest.json"; then
+            echo "Skipping $state - already 100% reported"
+            continue
+        fi
+        
         echo "Running scraper for $state..."
         cd "$state_dir"
         python3 "scraper.py"
