@@ -1,12 +1,6 @@
 {
-            "counted": {
-                "republican": 0,
-                "democrat": 0
-            },
-            "exit_poll": {
-                "republican": 0,
-                "democrat": 0
-            },
-            "reporting": 0,
-            "called": false
-        }
+  "state": "Alabama",
+  "type": "presidential",
+  "timestamp": "2024-11-05T18:24:45.345064",
+  "candidates": []
+}
