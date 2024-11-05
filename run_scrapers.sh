@@ -3,7 +3,8 @@
 # Make the script exit on any error
 set -e
 
-cd "$(dirname "$0")"
+TOP=$(cd "$(dirname "$0")" && pwd)
+cd "${TOP}"
 
 # Function to normalize state name for directory
 normalize_state_name() {
@@ -48,8 +49,9 @@ for state in "${states[@]}"; do
     # Check if scraper exists and run it
     if [ -f "$state_dir/scraper.py" ]; then
         echo "Running scraper for $state..."
-        python3 "$state_dir/scraper.py"
-        
+        cd "$state_dir"
+        python3 "scraper.py"
+        cd "$TOP"
         # If changes were made to latest.json, commit them
         if git diff --quiet "$state_dir/latest.json"; then
             echo "No changes for $state"
