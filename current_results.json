@@ -2,26 +2,26 @@
   "states": {
     "Missouri": {
       "counted": {
-        "republican": 1153768,
-        "democrat": 791930
+        "republican": 1157172,
+        "democrat": 792945
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 64.43,
+      "reporting": 64.57,
       "called": true
     },
     "New York": {
       "counted": {
-        "republican": 3322458,
-        "democrat": 4181840
+        "republican": 3323329,
+        "democrat": 4181927
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 90.29,
+      "reporting": 90.3,
       "called": true
     },
     "Alaska": {
@@ -38,14 +38,14 @@
     },
     "Illinois": {
       "counted": {
-        "republican": 2214954,
-        "democrat": 2599249
+        "republican": 2224487,
+        "democrat": 2625422
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 84.94,
+      "reporting": 85.57,
       "called": true
     },
     "South Carolina": {
@@ -62,8 +62,8 @@
     },
     "Virginia": {
       "counted": {
-        "republican": 1875600,
-        "democrat": 2080828
+        "republican": 1876486,
+        "democrat": 2082829
       },
       "exit_poll": {
         "republican": 0,
@@ -86,8 +86,8 @@
     },
     "Vermont": {
       "counted": {
-        "republican": 114926,
-        "democrat": 229978
+        "republican": 115411,
+        "democrat": 230670
       },
       "exit_poll": {
         "republican": 0,
@@ -122,20 +122,20 @@
     },
     "Connecticut": {
       "counted": {
-        "republican": 263708,
-        "democrat": 298647
+        "republican": 266253,
+        "democrat": 301307
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 31.72,
+      "reporting": 32.02,
       "called": true
     },
     "Alabama": {
       "counted": {
-        "republican": 1379474,
-        "democrat": 685189
+        "republican": 1409196,
+        "democrat": 719220
       },
       "exit_poll": {
         "republican": 0,
@@ -146,14 +146,14 @@
     },
     "New Hampshire": {
       "counted": {
-        "republican": 230616,
-        "democrat": 264357
+        "republican": 233690,
+        "democrat": 266970
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 69.37,
+      "reporting": 70.17,
       "called": true
     },
     "Oklahoma": {
@@ -194,14 +194,14 @@
     },
     "Maine": {
       "counted": {
-        "republican": 138260,
-        "democrat": 134656
+        "republican": 141516,
+        "democrat": 137661
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 35.22,
+      "reporting": 36.03,
       "called": false
     },
     "Mississippi": {
@@ -278,50 +278,50 @@
     },
     "New Jersey": {
       "counted": {
-        "republican": 1808720,
-        "democrat": 1995231
+        "republican": 1809154,
+        "democrat": 1996952
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 82.99,
+      "reporting": 83.03,
       "called": true
     },
     "Wisconsin": {
       "counted": {
-        "republican": 1318185,
-        "democrat": 1223373
+        "republican": 1319762,
+        "democrat": 1224500
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 79.15,
+      "reporting": 79.23,
       "called": false
     },
     "Michigan": {
       "counted": {
-        "republican": 1376346,
-        "democrat": 1309631
+        "republican": 1422316,
+        "democrat": 1365145
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 23.77,
+      "reporting": 23.95,
       "called": false
     },
     "Arizona": {
       "counted": {
-        "republican": 913521,
-        "democrat": 904435
+        "republican": 913781,
+        "democrat": 904465
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 54.81,
+      "reporting": 54.82,
       "called": false
     },
     "Massachusetts": {
@@ -350,14 +350,14 @@
     },
     "Montana": {
       "counted": {
-        "republican": 54400,
-        "democrat": 29113
+        "republican": 55018,
+        "democrat": 29245
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 14.88,
+      "reporting": 15.02,
       "called": true
     },
     "District of Columbia": {
@@ -374,14 +374,14 @@
     },
     "Wyoming": {
       "counted": {
-        "republican": 45212,
-        "democrat": 10148
+        "republican": 69880,
+        "democrat": 18484
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 21.24,
+      "reporting": 33.93,
       "called": true
     },
     "Minnesota": {
@@ -410,8 +410,8 @@
     },
     "Kentucky": {
       "counted": {
-        "republican": 1337448,
-        "democrat": 701092
+        "republican": 1337450,
+        "democrat": 701093
       },
       "exit_poll": {
         "republican": 0,
@@ -422,14 +422,14 @@
     },
     "North Dakota": {
       "counted": {
-        "republican": 229726,
-        "democrat": 104338
+        "republican": 235860,
+        "democrat": 106483
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 95.01,
+      "reporting": 97.37,
       "called": true
     },
     "Louisiana": {
@@ -458,14 +458,14 @@
     },
     "Texas": {
       "counted": {
-        "republican": 5732289,
-        "democrat": 4250457
+        "republican": 5746140,
+        "democrat": 4257419
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 84.44,
+      "reporting": 84.62,
       "called": true
     },
     "Hawaii": {
@@ -494,26 +494,26 @@
     },
     "Kansas": {
       "counted": {
-        "republican": 675248,
-        "democrat": 494921
+        "republican": 675277,
+        "democrat": 494937
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 90.08,
+      "reporting": 90.09,
       "called": true
     },
     "Pennsylvania": {
       "counted": {
-        "republican": 3016287,
-        "democrat": 2852914
+        "republican": 3058334,
+        "democrat": 2894156
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 82.89,
+      "reporting": 84.07,
       "called": false
     },
     "Nebraska": {
