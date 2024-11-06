@@ -42,11 +42,11 @@ def process_data(data):
 
     try:
         # Extract vote counts from the response
-        race = data.get("race", {})
+        race = data
         candidates = race.get("candidates", [])
 
         for candidate in candidates:
-            party = candidate.get("party", "").lower()
+            party = candidate.get("party_name", "").lower()
             votes = int(candidate.get("votes", 0))
 
             if party == "republican":
@@ -57,14 +57,11 @@ def process_data(data):
                 results["counted"]["democrat"] = votes
 
         # Get reporting percentage if available
-        if "precincts_reporting" in race and "precincts_total" in race:
-            total_precincts = race.get("precincts_total", 0)
-            if total_precincts > 0:
-                reporting_precincts = race.get("precincts_reporting", 0)
-                results["reporting"] = round(
-                    (reporting_precincts / total_precincts) * 100, 2
-                )
-
+        results["reporting"] = (
+            race.get("topline_results", {})
+            .get("estimated_votes", {})
+            .get("percent", 0.0)
+        )
         # Check if race is called
         results["called"] = race.get("called", False)
 
