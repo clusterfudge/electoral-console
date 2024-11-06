@@ -98,14 +98,14 @@
     },
     "South Dakota": {
       "counted": {
-        "republican": 189014,
-        "democrat": 90607
+        "republican": 190006,
+        "democrat": 91209
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 70.12,
+      "reporting": 70.52,
       "called": true
     },
     "Georgia": {
@@ -446,14 +446,14 @@
     },
     "Maryland": {
       "counted": {
-        "republican": 876424,
-        "democrat": 1288933
+        "republican": 1025156,
+        "democrat": 1405040
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 71.57,
+      "reporting": 80.33,
       "called": true
     },
     "Texas": {
@@ -518,14 +518,14 @@
     },
     "Nebraska": {
       "counted": {
-        "republican": 511962,
-        "democrat": 337813
+        "republican": 513201,
+        "democrat": 338401
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 88.39,
+      "reporting": 88.58,
       "called": true
     },
     "Tennessee": {
@@ -542,26 +542,26 @@
     },
     "Idaho": {
       "counted": {
-        "republican": 505095,
-        "democrat": 234058
+        "republican": 506604,
+        "democrat": 234224
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 84.91,
+      "reporting": 85.1,
       "called": true
     },
     "Oregon": {
       "counted": {
-        "republican": 704791,
-        "democrat": 913614
+        "republican": 709035,
+        "democrat": 918604
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 69.9,
+      "reporting": 71.73,
       "called": true
     },
     "Nevada": {
@@ -578,14 +578,14 @@
     },
     "California": {
       "counted": {
-        "republican": 3449712,
-        "democrat": 5179734
+        "republican": 3454605,
+        "democrat": 5182146
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 52.61,
+      "reporting": 52.65,
       "called": true
     },
     "West Virginia": {
