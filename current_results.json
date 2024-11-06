@@ -302,8 +302,8 @@
     },
     "Michigan": {
       "counted": {
-        "republican": 126343,
-        "democrat": 183276
+        "republican": 170407,
+        "democrat": 236765
       },
       "exit_poll": {
         "republican": 0,
@@ -506,8 +506,8 @@
     },
     "Pennsylvania": {
       "counted": {
-        "republican": 119002,
-        "democrat": 267308
+        "republican": 213228,
+        "democrat": 523849
       },
       "exit_poll": {
         "republican": 0,
