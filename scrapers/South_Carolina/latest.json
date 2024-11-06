@@ -7,6 +7,6 @@
     "republican": 0,
     "democrat": 0
   },
-  "reporting": 0,
-  "called": false
+  "reporting": 0.0,
+  "called": true
 }
