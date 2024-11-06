@@ -98,14 +98,14 @@
     },
     "South Dakota": {
       "counted": {
-        "republican": 204495,
-        "democrat": 99398
+        "republican": 204855,
+        "democrat": 99496
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 76.24,
+      "reporting": 76.35,
       "called": true
     },
     "Georgia": {
@@ -350,14 +350,14 @@
     },
     "Montana": {
       "counted": {
-        "republican": 216631,
-        "democrat": 144258
+        "republican": 218437,
+        "democrat": 145096
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 64.46,
+      "reporting": 64.93,
       "called": true
     },
     "District of Columbia": {
