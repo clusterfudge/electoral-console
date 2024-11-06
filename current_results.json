@@ -314,14 +314,14 @@
     },
     "Arizona": {
       "counted": {
-        "republican": 1002722,
-        "democrat": 952564
+        "republican": 1006868,
+        "democrat": 957903
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 58.96,
+      "reporting": 59.25,
       "called": false
     },
     "Massachusetts": {
@@ -578,14 +578,14 @@
     },
     "California": {
       "counted": {
-        "republican": 3710810,
-        "democrat": 5573074
+        "republican": 3738377,
+        "democrat": 5603927
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 56.62,
+      "reporting": 56.98,
       "called": true
     },
     "West Virginia": {
