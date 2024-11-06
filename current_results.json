@@ -134,8 +134,8 @@
     },
     "Alabama": {
       "counted": {
-        "republican": 16837,
-        "democrat": 6657
+        "republican": 19515,
+        "democrat": 9781
       },
       "exit_poll": {
         "republican": 0,
@@ -302,14 +302,14 @@
     },
     "Michigan": {
       "counted": {
-        "republican": 262336,
-        "democrat": 309061
+        "republican": 387526,
+        "democrat": 437125
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 1.89,
+      "reporting": 2.56,
       "called": false
     },
     "Arizona": {
@@ -506,8 +506,8 @@
     },
     "Pennsylvania": {
       "counted": {
-        "republican": 482878,
-        "democrat": 742972
+        "republican": 1126526,
+        "democrat": 1210576
       },
       "exit_poll": {
         "republican": 0,
