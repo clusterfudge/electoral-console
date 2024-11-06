@@ -326,14 +326,14 @@
     },
     "Massachusetts": {
       "counted": {
-        "republican": 1007470,
-        "democrat": 1735076
+        "republican": 1014541,
+        "democrat": 1748384
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 79.48,
+      "reporting": 80.07,
       "called": true
     },
     "North Carolina": {
@@ -350,14 +350,14 @@
     },
     "Montana": {
       "counted": {
-        "republican": 215770,
-        "democrat": 143971
+        "republican": 216062,
+        "democrat": 144019
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 64.25,
+      "reporting": 64.31,
       "called": true
     },
     "District of Columbia": {
