@@ -1,12 +1,12 @@
 {
   "counted": {
-    "republican": 3463480,
-    "democrat": 5188121
+    "republican": 3518600,
+    "democrat": 5237688
   },
   "exit_poll": {
     "republican": 0,
     "democrat": 0
   },
-  "reporting": 52.74,
+  "reporting": 53.38,
   "called": true
 }
