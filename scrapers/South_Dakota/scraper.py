@@ -3,7 +3,7 @@ import json
 
 
 def fetch_data():
-    url = "https://embed-api.ddhq.io/v2/races/52835"
+    url = "https://embed-api.ddhq.io/v2/races/52834"
 
     headers = {
         "accept": "*/*",
@@ -44,6 +44,7 @@ def process_data(data):
         # Extract vote counts from the response
         race = data
         candidates = race.get("candidates", [])
+        print(f"Title: {race.get('title')}")
 
         for candidate in candidates:
             party = candidate.get("party_name", "").lower()

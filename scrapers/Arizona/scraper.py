@@ -43,6 +43,7 @@ def process_data(data):
     try:
         # Extract vote counts from the response
         race = data
+        print(f"Title: {race.get('title')}")
         candidates = race.get("candidates", [])
 
         for candidate in candidates:
