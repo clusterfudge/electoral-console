@@ -302,8 +302,8 @@
     },
     "Michigan": {
       "counted": {
-        "republican": 2332432,
-        "democrat": 2150554
+        "republican": 2334133,
+        "democrat": 2151208
       },
       "exit_poll": {
         "republican": 0,
@@ -350,8 +350,8 @@
     },
     "Montana": {
       "counted": {
-        "republican": 155917,
-        "democrat": 109432
+        "republican": 155920,
+        "democrat": 109436
       },
       "exit_poll": {
         "republican": 0,
@@ -458,14 +458,14 @@
     },
     "Texas": {
       "counted": {
-        "republican": 6206541,
-        "democrat": 4621567
+        "republican": 6207731,
+        "democrat": 4623306
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 91.67,
+      "reporting": 91.69,
       "called": true
     },
     "Hawaii": {
@@ -494,14 +494,14 @@
     },
     "Kansas": {
       "counted": {
-        "republican": 689687,
-        "democrat": 500031
+        "republican": 735457,
+        "democrat": 523088
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 91.59,
+      "reporting": 96.89,
       "called": true
     },
     "Pennsylvania": {
@@ -518,14 +518,14 @@
     },
     "Nebraska": {
       "counted": {
-        "republican": 479310,
-        "democrat": 317579
+        "republican": 482886,
+        "democrat": 317984
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 82.86,
+      "reporting": 83.27,
       "called": true
     },
     "Tennessee": {
@@ -542,14 +542,14 @@
     },
     "Idaho": {
       "counted": {
-        "republican": 481634,
-        "democrat": 219720
+        "republican": 493676,
+        "democrat": 228987
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 80.56,
+      "reporting": 83.02,
       "called": true
     },
     "Oregon": {
@@ -578,8 +578,8 @@
     },
     "California": {
       "counted": {
-        "republican": 3375827,
-        "democrat": 5122384
+        "republican": 3376101,
+        "democrat": 5122476
       },
       "exit_poll": {
         "republican": 0,
