@@ -98,14 +98,14 @@
     },
     "South Dakota": {
       "counted": {
-        "republican": 181673,
-        "democrat": 86873
+        "republican": 182034,
+        "democrat": 87290
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 67.34,
+      "reporting": 67.54,
       "called": true
     },
     "Georgia": {
@@ -146,14 +146,14 @@
     },
     "New Hampshire": {
       "counted": {
-        "republican": 308062,
-        "democrat": 342451
+        "republican": 308242,
+        "democrat": 342708
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 91.12,
+      "reporting": 91.18,
       "called": true
     },
     "Oklahoma": {
@@ -194,14 +194,14 @@
     },
     "Maine": {
       "counted": {
-        "republican": 291193,
-        "democrat": 317720
+        "republican": 291359,
+        "democrat": 317876
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 78.6,
+      "reporting": 78.64,
       "called": false
     },
     "Mississippi": {
@@ -554,38 +554,38 @@
     },
     "Oregon": {
       "counted": {
-        "republican": 701364,
-        "democrat": 911493
+        "republican": 703038,
+        "democrat": 912488
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 69.65,
+      "reporting": 69.78,
       "called": true
     },
     "Nevada": {
       "counted": {
-        "republican": 562824,
-        "democrat": 509879
+        "republican": 566982,
+        "democrat": 513327
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 77.91,
+      "reporting": 78.46,
       "called": false
     },
     "California": {
       "counted": {
-        "republican": 3337527,
-        "democrat": 5100160
+        "republican": 3337940,
+        "democrat": 5100479
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 51.43,
+      "reporting": 51.44,
       "called": true
     },
     "West Virginia": {
