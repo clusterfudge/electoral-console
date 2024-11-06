@@ -20,6 +20,6 @@ while true; do
         echo "No changes detected"
     fi
 
-    echo "Sleeping for 10 minutes..."
-    sleep 600
+    echo "Sleeping for 1 minute..."
+    sleep 60
 done

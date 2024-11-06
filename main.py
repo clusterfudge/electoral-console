@@ -86,7 +86,7 @@ class StateButton(Button):
             # Update label to show vote percentages and called status
             called_indicator = "✓" if self.called else ""
             if total_votes > 0:
-                self.label = f"{self.state} {called_indicator}\n({self.votes})\n{dem_pct:.1f}% - {rep_pct:.1f}%\n{total_votes:,} votes"
+                self.label = f"{self.state} {called_indicator}\n({self.votes})\n{dem_pct:.1f}% - {rep_pct:.1f}%\n{total_votes:,} votes\n{self.reporting:.1f}% reporting"
             else:
                 self.label = f"{self.state} {called_indicator}\n({self.votes})\n{self.reporting:.1f}% reporting"
 
@@ -177,19 +177,35 @@ class ElectoralMap(Static):
 class ElectoralCounter(Static):
     """Widget to display electoral vote totals."""
 
-    dem_votes = reactive(0)
-    rep_votes = reactive(0)
-    dem_total_votes = reactive(0)
-    rep_total_votes = reactive(0)
+    dem_votes = reactive(0)  # Called electoral votes
+    rep_votes = reactive(0)  # Called electoral votes
+    dem_votes_with_leads = reactive(0)  # Electoral votes including current leads
+    rep_votes_with_leads = reactive(0)  # Electoral votes including current leads
+    dem_total_votes = reactive(0)  # Popular votes
+    rep_total_votes = reactive(0)  # Popular votes
 
     def render(self) -> Text:
         """Render the vote counter."""
         return Text.assemble(
             ("Democratic: ", "blue"),
-            (f"{self.dem_votes} ({self.dem_total_votes:,})", "white"),
+            (f"{self.dem_votes}", "white"),  # Called EVs
+            (" (", "white"),
+            (
+                f"+{self.dem_votes_with_leads - self.dem_votes}",
+                "#000066",
+            ),  # Leading EVs
+            (f" = {self.dem_votes_with_leads}) ", "white"),  # Total including leads
+            (f"({self.dem_total_votes:,})", "white"),  # Popular votes
             " | ",
             ("Republican: ", "red"),
-            (f"{self.rep_votes} ({self.rep_total_votes:,})", "white"),
+            (f"{self.rep_votes}", "white"),  # Called EVs
+            (" (", "white"),
+            (
+                f"+{self.rep_votes_with_leads - self.rep_votes}",
+                "#660000",
+            ),  # Leading EVs
+            (f" = {self.rep_votes_with_leads}) ", "white"),  # Total including leads
+            (f"({self.rep_total_votes:,})", "white"),  # Popular votes
             " | ",
             "270 to win",
         )
@@ -303,12 +319,19 @@ class ElectoralMapApp(App):
         """Update the electoral vote totals."""
         counter = self.query_one(ElectoralCounter)
         dem_electoral = rep_electoral = 0
+        dem_electoral_with_leads = rep_electoral_with_leads = 0
         dem_total = rep_total = 0
 
         for button in self.query(StateButton):
             # Add to popular vote totals regardless of called status
             dem_total += button.dem_votes
             rep_total += button.rep_votes
+
+            # Count electoral votes including current leads
+            if button.dem_votes > button.rep_votes:
+                dem_electoral_with_leads += button.votes
+            elif button.rep_votes > button.dem_votes:
+                rep_electoral_with_leads += button.votes
 
             # Only count called states in the electoral total
             if button.called:
@@ -319,6 +342,8 @@ class ElectoralMapApp(App):
 
         counter.dem_votes = dem_electoral
         counter.rep_votes = rep_electoral
+        counter.dem_votes_with_leads = dem_electoral_with_leads
+        counter.rep_votes_with_leads = rep_electoral_with_leads
         counter.dem_total_votes = dem_total
         counter.rep_total_votes = rep_total
 
