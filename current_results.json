@@ -350,14 +350,14 @@
     },
     "Montana": {
       "counted": {
-        "republican": 216199,
-        "democrat": 144063
+        "republican": 216225,
+        "democrat": 144141
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 64.35,
+      "reporting": 64.37,
       "called": true
     },
     "District of Columbia": {
