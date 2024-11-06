@@ -62,8 +62,8 @@
     },
     "Virginia": {
       "counted": {
-        "republican": 1981257,
-        "democrat": 2211797
+        "republican": 1982318,
+        "democrat": 2212596
       },
       "exit_poll": {
         "republican": 0,
@@ -290,14 +290,14 @@
     },
     "Wisconsin": {
       "counted": {
-        "republican": 1589420,
-        "democrat": 1460501
+        "republican": 1593999,
+        "democrat": 1465130
       },
       "exit_poll": {
         "republican": 0,
         "democrat": 0
       },
-      "reporting": 94.95,
+      "reporting": 95.24,
       "called": true
     },
     "Michigan": {
@@ -350,8 +350,8 @@
     },
     "Montana": {
       "counted": {
-        "republican": 137679,
-        "democrat": 92399
+        "republican": 137686,
+        "democrat": 92402
       },
       "exit_poll": {
         "republican": 0,
